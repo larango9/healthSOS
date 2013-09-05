@@ -23,7 +23,7 @@ and open the template in the editor.
             </div>
             
             <p> aqui va el slogan</p>
-</form>
+
             <div id="menuhoriz">
 
                 <ul>  
@@ -32,44 +32,44 @@ and open the template in the editor.
                     <li>Contactenos</li>
                 </ul>
             </div>
-        
 
             <div style="text-align:centert">
                 <div style="text-align: justify">
-                    
+
                     <article>
                         <h4>¡Bienvenidos!</h4>
                         <p><a href="http://www.google.com" target="_blank">Health S.O.S</a> es una aplicación la cual permite a los usuarios gestionar sus citas médicas de una manera rápida y eficiente,</p>
                         <p>permitiendole contar con servicios que le dará solución a muchas de sus necesidades.</p>
                     </article>
 
-                    <div id="video"> 
-                        <iframe width="560" height="315" src="http://www.youtube.com/embed/0UBZyXFjafc?rel=0" frameborder="0" allowfullscreen="true"></iframe>
-                    </div>
-
-                    <section id="loginUser">
+                    <section id="register">
                         <form>
-                            <h3>Iniciar Sesion</h3>
-
+                            <h3>Formulario de Registro</h3>
+                            
+                            <p>Nombre</p>
+                            <input class="inputField" id="txtName" type="text" value="" required />
+                            <p>Apellidos</p>
+                            <input class="inputField" id="txtSurname" type="text" value="" required />
                             <p>Tipo de Documento:</p>
-                            <input class="inputField" id="txtTipedocument" type="text" list="typeDocuments"/>
+                            <input class="inputField" id="txtTipedocument" type="text" list="typeDocuments" value="" required/>
                             <datalist id="typeDocuments">
                                 <option value="Cedula" />
                                 <option value="Tarjeta de Identidad" />
                                 <option value="Registro Civil" />
                             </datalist>
                             <p>Numero de Documento:</p>
-                            <input class="inputField" id="txtNumberdocument" type="text" />
+                            <input class="inputField" id="txtNumberdocument" type="text" value="" required/>
                             <p>Contrase&ntilde;a:</p>
-                            <input class="inputField" id="txtPassword" type="password" />
+                            <input class="inputField" id="txtPassword" type="password" value="" required/>
+                            <p>Confirmar Contrase&ntilde;a:</p>
+                            <input class="inputField" id="txtPassword" type="password" value="" required/>
+                            <p>Email:</p>
+                            <input class="inputField" id="txtEmail" type="email" value="" required />
+                            <p>Número de Celular:</p>
+                            <input class="inputField" id="txtCellnumber" type="text" value="" required />
+                            
                             <br />
-                            <input class="buttonStyle" id="btnLogin" type="button" value="Login" />
-                        </form>
-                    </section>
-                    <section id="doRegister">
-                        <form>
-                            <h3>¿Deseas Registrarte?</h3>             
-                            <div id="register"><p><a href="register.html">Hazlo Aqui</a></p></div>
+                            <input class="buttonStyle" id="btnLogin" type="button" value="Registrar" />
                         </form>
                     </section>
                     <br /><br /><br />

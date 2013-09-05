@@ -1,61 +1,67 @@
-    body{
-     background-color: #000;
-     background-image: url(../imagenes/fondo.jpg);
-     background-size:cover;
-    }
-    
-    #menuhoriz{
-        text-align:center;
-        font-size: large;
-    }
-    
-    #menuh {
-	font: 80% "Ravie", Arial, Helvetica, sans-serif;
-	margin-top: 20px;
-    }
+body{
+    background-color: #FFFFFF;
+    background-image: url(../imagenes/fondo.jpg);
+    background-size:cover;
+}
 
-    #menuhoriz ul li {
-        display: inline;
-        padding: 2px 7px; /*Separar el texto*/
-        margin:5px; /* Separar los botones */
-        background-color:#E4E4E4; /* Color de fondo */
-        
-    }
-    
-    #menuhoriz ul li:hover {
-        background-color:#CCCCCC; /* Color de fondo sobre el boton */
-        cursor: pointer; /* cambiar el aspecto del puntero */
-    }
-    
-    #menuhoriz ul {
-        /* Linea para delimitar la botonera */
-        border-bottom: #FFFFFF solid 1px;
-    }
+#logo{
+    position: initial;   
+    top: 50px;
+    left: 200px; 
+}
 
-    h1{
-        font-family: "comic sans ms";
-        color: #FFFFFF;
-        font-style: italic;
-        text-align: center;
-    }
+#menuhoriz{
+    text-align:center;
+    font-size: large;
+}
 
-    h2{
-        font-family: "comic sans ms";
-        color: #FFFFFF;
-        font-style: italic;
-        text-align: center;
-    }    
+#menuh {
+    font: 80% "Ravie", Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+#menuhoriz ul li {
+    display: inline;
+    padding: 2px 7px; /*Separar el texto*/
+    margin:5px; /* Separar los botones */
+    background-color:#E4E4E4; /* Color de fondo */
+
+}
+
+#menuhoriz ul li:hover {
+    background-color:#CCCCCC; /* Color de fondo sobre el boton */
+    cursor: pointer; /* cambiar el aspecto del puntero */
+}
+
+#menuhoriz ul {
+    /* Linea para delimitar la botonera */
+    border-bottom: #3399FF solid 1px;
+}
+
+h1{
+    font-family: "comic sans ms";
+    color: #FFFFFF;
+    font-style: italic;
+    text-align: center;
+}
+
+h2{
+    font-family: "comic sans ms";
+    color: #FFFFFF;
+    font-style: italic;
+    text-align: center;
+}    
 
 #video{
- position: absolute;   
- top: 500px;
- left: 400px; 
+    position: absolute;   
+    top: 500px;
+    left: 200px; 
 }
 
 #loginUser{
-    border: 1px #FFFFFF dashed;
+    border: 2px #0000CC solid;
     position: absolute;
-    top: 300px;
+    top: 400px;
     left: 1000px;
     padding: 20px;
 }
@@ -64,7 +70,7 @@
     border: 2px solid #1100FF;
     width: 200px;
     background: transparent;
-    color: #ffffff;
+    color: #000000;
     padding: 3px;
 }
 
@@ -78,4 +84,51 @@
     padding: 3px;
     cursor: pointer;
     height: 28px;
+}
+
+#doRegister{
+    border: 2px #0000CC solid;
+    position: absolute;
+    top: 30px;
+    left: 1030px;
+    padding: 20px;
+}
+
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+.contact {
+    display:block;
+    margin:0 auto;
+    width:510px;
+    color: #000000;
+    font-family:Arial;
+}
+form {
+    margin:0 auto;
+    width:400px;
+}
+ 
+input, textarea {
+    width:380px;
+    height:27px;
+    border:2px solid #0033FF;
+    padding:10px;
+    margin-top:5px;
+    font-size:10px;
+    color:#000000;
+}
+ 
+textarea {
+    height:150px;
+}
+ 
+#submit {
+    width:85px;
+    height:35px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
 }
