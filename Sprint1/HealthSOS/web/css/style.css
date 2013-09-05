@@ -40,16 +40,16 @@ body{
 
 h1{
     font-family: "comic sans ms";
-    color: #FFFFFF;
+    color: #000000;
     font-style: italic;
     text-align: center;
 }
 
 h2{
     font-family: "comic sans ms";
-    color: #FFFFFF;
+    color: #000000;
     font-style: italic;
-    text-align: center;
+    text-align: left;
 }    
 
 #video{
@@ -62,12 +62,11 @@ h2{
     border: 2px #0000CC solid;
     position: absolute;
     top: 400px;
-    left: 1000px;
-    padding: 20px;
+    left: 900px;
+    padding: 3px;
 }
 
 .inputField{
-    border: 2px solid #1100FF;
     width: 200px;
     background: transparent;
     color: #000000;
@@ -86,12 +85,25 @@ h2{
     height: 28px;
 }
 
-#doRegister{
-    border: 2px #0000CC solid;
+#clickRegister{
+    width: 200px;
+    height: 28px;
     position: absolute;
-    top: 30px;
-    left: 1030px;
-    padding: 20px;
+    top: 275px;
+    left: 230px;
+}
+
+#doRegister{
+    position: absolute;
+    top: 800px;
+    left: 900px;
+    padding: 1px;
+}
+
+#register{
+    position: absolute;
+    top: 100;
+    left: 100px;
 }
 
 label {
@@ -105,19 +117,22 @@ label {
     width:510px;
     color: #000000;
     font-family:Arial;
+    position: absolute;
+    top: 350px;
+    left: 500px;
 }
 form {
     margin:0 auto;
     width:400px;
+    
 }
  
 input, textarea {
     width:380px;
     height:27px;
-    border:2px solid #0033FF;
-    padding:10px;
+    padding:1px; /*Tamaño caja de texto*/
     margin-top:5px;
-    font-size:10px;
+    font-size:12px;
     color:#000000;
 }
  
@@ -125,10 +140,8 @@ textarea {
     height:150px;
 }
  
-#submit {
-    width:85px;
-    height:35px;
-    border:none;
-    margin-top:20px;
-    cursor:pointer;
+#servicios{
+    position: absolute;   
+    top: 350px;
+    left: 800px; 
 }
