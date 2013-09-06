@@ -37,7 +37,7 @@
                 <div class="container">
 
                     <ul id="nav">
-                        <li><a href="editProfileUser.html"><img src="imagenes/t1.png" />Perfil</a></li>
+                        <li><a href="#"><img src="imagenes/t1.png" />Perfil</a></li>
                         <li><a href="#" class="sub" tabindex="1"><img src="imagenes/t3.png" />Buscar</a><img src="imagenes/up.gif" alt="" />
                             <ul>
                                 <li><a href="#"><img src="imagenes/empty.gif" />Link 1</a></li>
@@ -52,14 +52,32 @@
                         <li><a href="#"><img src="imagenes/t2.png" />Sedes</a></li>
                     </ul>
                     
-                    <div id="text2">
-                    <article>
-                        <h4>¡Bienvenido!</h4>
-                        <p>En este espacio podrá editar sus datos personales, revisar las citas asignadas a su nombre,</p>
-                        <p>concocer los nombres de los médicos y obtener información acerca de las sedes.</p>
-                    </article>
-                        </div>
+             <section id="editProfileUser">
+                    <form>
+                        <h1>Perfil</h1>
 
+                        <label for="name">Nombre:</label>
+                        <input id="name" type="text" name="name" placeholder="Nombre" required="" />
+                        <label for="surname">Apellido:</label>
+                        <input id="surname" type="text" name="surname" placeholder="Apellido" required="" />
+                        <label for="typeDocument">Tipo de Documento:</label>
+                        <select id="typeDocument" name="typeDocument" >
+                            <option selected value="">Seleccionar uno</option><option value="m">Cedula</option><option value="f">Tarjeta Identidad</option><option value="u">Registro Civil</option>
+                        </select>
+                        <label for="numberDocument">Número de Documento:</label>
+                        <input id="numberDocument" type="text" name="numberDocument" placeholder="Número de Documento" required="" />
+                        <label for="birthday">Fecha de Nacimiento:</label>
+                        <input id="birthday" type="date" name="birthday" placeholder="birthday" required="" />
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required="" />
+                        <label for="cellNumber">Número de Celular:</label>
+                        <input id="cellNumber" type="text" name="cellNumber" placeholder="Número de Celular" required=""/>
+                        <input class="buttonStyle" id="btnRegister" type="button" value="Guardar" />                          
+                        <br />
+                    </form>
+                </section>
+
+                    
                 </div>
                 </body>
                 </html>

@@ -260,3 +260,16 @@ textarea {
 #nav ul:hover li {
     margin-top:0;
 }
+
+/*Texto Vista Profile User*/
+#text2{
+    position: absolute;   
+    top: 350px;
+    left: 300px; 
+}
+
+#editProfileUser{
+    position: absolute;   
+    top: 330px;
+    left: 400px; 
+}
