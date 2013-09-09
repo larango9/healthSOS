@@ -2,9 +2,8 @@
 
     session_start();
     
-    
-    function createSession($user){
-        $_SESSION['user'] = $user;
+    function createSession($admin){
+        $_SESSION['admin'] = $admin;
         return true;
     }
     
@@ -14,11 +13,10 @@
     }
     
     function getSession(){
-        if(isset($_SESSION['user'])){
+        if(isset($_SESSION['admin'])){
             return true;
         }
         return false;
     }
-
-
+    
 ?>

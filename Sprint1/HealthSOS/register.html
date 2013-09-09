@@ -1,0 +1,66 @@
+<!DOCTYPE html>    
+
+<html>
+    <head>
+        <title> Health S.O.S </title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <form>
+            <div id="logo">
+                <img    src="imagenes/Logo.jpg">
+            </div>
+
+            <div style="text-align:center"><h1>Health S.O.S</h1></div>
+            <div style="text-align:center" >
+
+            </div>
+
+            <p> aqui va el slogan</p>
+        </form>
+        <div id="menuhoriz">
+
+            <ul>  
+                <li> <a href="index.html"> Inicio</a></li>
+                <li> <a href="services.html"> Servicios</a></li>
+                <li> <a href="contact.html"> Contactenos</a></li>
+            </ul>
+        </div>
+
+
+        <div style="text-align:centert">
+            <div style="text-align: justify">
+
+                <section id="register">
+                    <h1>Formulario de Registro</h1>
+                    <form action="class.php" method="post">
+
+                        <label for="name">Nombre:</label>
+                        <input id="name" type="text" name="name" placeholder="Nombre" required="" />
+                        <label for="surname">Apellido:</label>
+                        <input id="surname" type="text" name="surname" placeholder="Apellido" required="" />
+                        <label for="typeDocument">Tipo de Documento:</label>
+                        <select id="typeDocument" name="typeDocument" >
+                            <option selected value="">Seleccionar uno</option><option value="m">Cedula</option><option value="f">Tarjeta Identidad</option><option value="u">Registro Civil</option>
+                        </select>
+                        <label for="numberDocument">Número de Documento:</label>
+                        <input id="numberDocument" type="text" name="numberDocument" placeholder="Número de Documento" required="" />
+                        <label for="password">Contraseña:</label>
+                        <input id="password" type="password" name="password" placeholder="Contraseña" required="" />
+                        <label for="confirmPassword">Confirmar Contraseña:</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirmar Contraseña" required="" />
+                        <label for="birthday">Fecha de Nacimiento:</label>
+                        <input id="birthday" type="date" name="birthday" placeholder="birthday" required="" />                    
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required="" />
+                        <label for="cellNumber">Número de Celular:</label>
+                        <input id="cellNumber" type="text" name="cellNumber" placeholder="Número de Celular" required=""/>
+                        <input class="buttonStyle" id="btnRegister" type="button" value="Aceptar" />
+                    </form>
+
+                </section>
+                </body>
+                </html>
