@@ -1,9 +1,11 @@
 <?php
 
+    
     include_once 'Session.php';
     include_once 'MysqlDBC.php';
     
-    $session = closeSession();
+    
+    $session = getSession();
     echo json_encode(array('session' => $session));
 
 ?>

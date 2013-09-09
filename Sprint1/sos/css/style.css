@@ -1,0 +1,161 @@
+body{
+   background-color: #FFFFFF;
+    background-image: url(../imagenes/fondo.jpg);
+    font-family: 'Verdana';
+    padding: 0px;
+    margin: 30px;
+}
+
+.inputField{
+    border: 2px solid #1100FF;
+    width: 200px;
+    background: transparent;
+    color: #000000;
+    padding: 3px;
+}
+
+.buttonStyle{
+    margin-top: 10px;
+    border: 0px;
+    border: 2px solid #1100FF;
+    width: 200px;
+    background: #ffffff;
+    color: #1100FF;
+    padding: 3px;
+    cursor: pointer;
+    height: 28px;
+}
+
+#menuInit{
+    display: none;
+}
+#menuRegister{
+    display: none;
+}
+
+.eachItemMenu{
+    float: right;
+    margin-right: 50px;
+}.eachItemMenu p{
+    color: #1100FF;
+}.eachItemMenu p:hover{
+    color: #0000cc;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    font-size: 1.3em;
+}
+h3{
+    font-size: 1.3em;
+}
+
+
+article{
+    clear: both;
+    min-height: 400px;
+}
+#registerUser{
+    display: none;
+    margin-bottom: 20px;
+    border: 2px solid #1100FF;
+    padding: 10px;
+}
+
+#loginUser{
+    display: none;
+    margin-bottom: 20px;
+    border: 2px solid #1100FF;
+    padding: 10px;
+}
+
+#uploadImage{
+    display: none;
+    margin-bottom: 20px;
+    border: 2px solid #1100FF;
+    padding: 10px;
+}
+
+#listFiles{
+
+}#listFiles a{
+    color: #333333;
+}
+
+footer{
+    font-size: 0.8em;
+}
+
+#menuhoriz{
+    text-align:center;
+    font-size: large;
+}
+
+#menuh {
+    font: 80% "Ravie", Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+
+#menuhoriz ul li {
+    display: inline;
+    padding: 2px 7px; /*Separar el texto*/
+    margin:5px; /* Separar los botones */
+    background-color:#E4E4E4; /* Color de fondo */
+
+}
+
+#menuhoriz ul li:hover {
+    background-color:#CCCCCC; /* Color de fondo sobre el boton */
+    cursor: pointer; /* cambiar el aspecto del puntero */
+}
+
+#menuhoriz ul {
+    /* Linea para delimitar la botonera */
+    border-bottom: #3399FF solid 1px;
+}
+
+#logo{
+    position: initial;   
+    top: 50px;
+    left: 200px; 
+}
+
+/*Servicios*/
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+}
+.contact {
+    display:block;
+    margin:0 auto;
+    width:510px;
+    color: #000000;
+    font-family:Arial;
+    position: absolute;
+    top: 350px;
+    left: 500px;
+}
+form {
+    margin:0 auto;
+    width:400px;
+    
+}
+ 
+input, textarea {
+    width:380px;
+    height:27px;
+    padding:1px; /*Tamaño caja de texto*/
+    margin-top:5px;
+    font-size:12px;
+    color:#000000;
+}
+ 
+textarea {
+    height:150px;
+}

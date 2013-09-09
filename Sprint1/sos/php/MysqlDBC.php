@@ -7,7 +7,6 @@
  * 
  * @author 
  */
-
 class MysqlDBC {
 
     private $connection; // mysql connection
@@ -16,7 +15,7 @@ class MysqlDBC {
     private $password;
     private $name;
     
-    function __construct($url = 'localhost', $username = 'root', $password = '', $name = 'healthsos') {
+    function __construct($url = 'localhost', $username = 'root', $password = '', $name = 'db_h') {
         $this->url = $url;
         $this->username = $username;
         $this->password = $password;
