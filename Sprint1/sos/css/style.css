@@ -1,13 +1,77 @@
 body{
-    background-color: #FFFFFF;
+   background-color: #FFFFFF;
     background-image: url(../imagenes/fondo.jpg);
-    background-size:cover;
+    font-family: 'Verdana';
+    padding: 0px;
+    margin: 30px;
 }
 
-#logo{
-    position: initial;   
-    top: 50px;
-    left: 200px; 
+.inputField{
+    border: 2px solid #1100FF;
+    width: 200px;
+    background: transparent;
+    color: #000000;
+    padding: 3px;
+}
+
+.buttonStyle{
+    margin-top: 10px;
+    border: 0px;
+    border: 2px solid #1100FF;
+    width: 200px;
+    background: #ffffff;
+    color: #1100FF;
+    padding: 3px;
+    cursor: pointer;
+    height: 28px;
+}
+
+#menuInit{
+    display: none;
+}
+#menuRegister{
+    display: none;
+}
+
+.eachItemMenu{
+    float: right;
+    margin-right: 50px;
+}.eachItemMenu p{
+    color: #1100FF;
+}.eachItemMenu p:hover{
+    color: #0000cc;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    font-size: 1.3em;
+}
+h3{
+    font-size: 1.3em;
+}
+
+
+article{
+    clear: both;
+    min-height: 400px;
+}
+#registerUser{
+    display: none;
+    margin-bottom: 20px;
+    border: 2px solid #1100FF;
+    padding: 10px;
+}
+
+#loginUser{
+    display: none;
+    margin-bottom: 20px;
+    border: 2px solid #1100FF;
+    padding: 10px;
 }
 
 #menuhoriz{
@@ -38,74 +102,13 @@ body{
     border-bottom: #3399FF solid 1px;
 }
 
-h1{
-    font-family: "comic sans ms";
-    color: #000000;
-    font-style: italic;
-    text-align: center;
-}
-
-h2{
-    font-family: "comic sans ms";
-    color: #000000;
-    font-style: italic;
-    text-align: left;
-}    
-
-#video{
-    position: absolute;   
-    top: 500px;
+#logo{
+    position: initial;   
+    top: 50px;
     left: 200px; 
 }
 
-#loginUser{
-    border: 2px #0000CC solid;
-    position: absolute;
-    top: 400px;
-    left: 900px;
-    padding: 3px;
-}
-
-.inputField{
-    width: 200px;
-    background: transparent;
-    color: #000000;
-    padding: 3px;
-}
-
-.buttonStyle{
-    margin-top: 10px;
-    border: 0px;
-    border: 2px solid #1100FF;
-    width: 200px;
-    background: #ffffff;
-    color: #1100FF;
-    padding: 3px;
-    cursor: pointer;
-    height: 28px;
-}
-
-#clickRegister{
-    width: 200px;
-    height: 28px;
-    position: absolute;
-    top: 275px;
-    left: 230px;
-}
-
-#doRegister{
-    position: absolute;
-    top: 800px;
-    left: 900px;
-    padding: 1px;
-}
-
-#register{
-    position: absolute;
-    top: 100;
-    left: 100px;
-}
-
+/*Contactenos*/
 label {
     display:block;
     margin-top:20px;
@@ -138,12 +141,6 @@ input, textarea {
  
 textarea {
     height:150px;
-}
- 
-#servicios{
-    position: absolute;   
-    top: 350px;
-    left: 800px; 
 }
 
 /*Menu lateral*/
@@ -259,17 +256,4 @@ textarea {
 }
 #nav ul:hover li {
     margin-top:0;
-}
-
-/*Texto Vista Profile User*/
-#text2{
-    position: absolute;   
-    top: 350px;
-    left: 300px; 
-}
-
-#editProfileUser{
-    position: absolute;   
-    top: 330px;
-    left: 400px; 
 }

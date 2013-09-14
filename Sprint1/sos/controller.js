@@ -51,6 +51,12 @@ function initEvents() {
 
 
 function registerUser(numDocument, pass, userName, userSurname, birthday, email, cellNum) {
+    var tpass = $('#txtPasswordNew').val();
+    var trpass = $('#txtrPasswordNew').val();
+    if(tpass != trpass){
+        alert('Diferente');
+        return;
+    }
     $.ajax({
         dataType: "json",
         url: 'php/registerUser.php',
@@ -77,6 +83,7 @@ function loginUser(numDocument, pass) {
         success: function(data) {
             if (data.result == true) {
                 alert('Bienvenido');
+                window.location.replace("profileAdmin.html");
                 $('#menuInit').fadeOut();
                 $('#menuRegister').fadeIn();
                 $('#loginUser').fadeOut();

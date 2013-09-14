@@ -15,10 +15,11 @@
 
         $mysqlDBC = new MysqlDBC();
         $result = $mysqlDBC->insert($sql);
-        if ($result != null) {
+        if ($result != null ) {
             createSession($numDocument);
             echo json_encode(array('result' => true));
-        } else {
+            } else {
             echo json_encode(array('result' => false));
-        }
+            }
+        
 ?>
