@@ -5,7 +5,8 @@
     
     $numDocument = $_REQUEST['numDocument'];
     $pass = $_REQUEST['pass'];
-    $sql = "SELECT * FROM `user` WHERE `numDocument` = '".$numDocument."' AND `password` = '".$pass."' ";
+
+    $sql = "SELECT * FROM `patient` WHERE `numDocument` = '".$numDocument."' AND `password` = '".$pass."' ";
     
     
     $mysqlDBC = new MysqlDBC();

@@ -11,15 +11,14 @@
         $email = $_REQUEST['email'];
         $cellNum = $_REQUEST['cellNum'];
      
-        $sql = "INSERT INTO `user` (`id_user`, `numDocument`, `password`, `userName`, `userSurname`, `birthday`, `email`, `cellNum`) VALUES (NULL, '" . $numDocument . "', '" . $pass . "', '" . $userName . "', '" . $userSurname . "', '" . $birthday . "', '" . $email . "', '" . $cellNum . "') ";
+        $sql = "INSERT INTO `patient` (`id_patient`, `numDocument`, `password`, `userName`, `userSurname`, `birthday`, `email`, `cellNum`) VALUES (NULL, '" . $numDocument . "', '" . $pass . "', '" . $userName . "', '" . $userSurname . "', '" . $birthday . "', '" . $email . "', '" . $cellNum . "') ";
 
         $mysqlDBC = new MysqlDBC();
         $result = $mysqlDBC->insert($sql);
-        if ($result != null ) {
+        if ($result != null) {
             createSession($numDocument);
             echo json_encode(array('result' => true));
-            } else {
+        } else {
             echo json_encode(array('result' => false));
-            }
-        
+        }
 ?>

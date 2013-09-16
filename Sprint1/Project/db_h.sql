@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-09-2013 a las 03:50:05
+-- Tiempo de generación: 16-09-2013 a las 04:21:05
 -- Versión del servidor: 5.5.32
 -- Versión de PHP: 5.4.16
 
@@ -25,11 +25,11 @@ USE `db_h`;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `user`
+-- Estructura de tabla para la tabla `patient`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `patient` (
+  `id_patient` int(11) NOT NULL AUTO_INCREMENT,
   `numDocument` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `userName` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -37,14 +37,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `birthday` date NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `cellNum` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=36 ;
+  PRIMARY KEY (`id_patient`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=51 ;
 
 --
--- Volcado de datos para la tabla `user`
+-- Volcado de datos para la tabla `patient`
 --
 
-INSERT INTO `user` (`id_user`, `numDocument`, `password`, `userName`, `userSurname`, `birthday`, `email`, `cellNum`) VALUES
+INSERT INTO `patient` (`id_patient`, `numDocument`, `password`, `userName`, `userSurname`, `birthday`, `email`, `cellNum`) VALUES
 (1, 'je', 'je', '', '', '0000-00-00', '', ''),
 (2, 'yuliana', 'yuli', '', '', '0000-00-00', '', ''),
 (25, '8', '8', 'j', '', '0000-00-00', '', ''),
@@ -54,7 +54,8 @@ INSERT INTO `user` (`id_user`, `numDocument`, `password`, `userName`, `userSurna
 (31, '5', '5', 'hy', 'ui', '2013-09-10', 'hghrt@hyh.com', ''),
 (32, '65', 'tgg', 'ngh', 'sdcf', '2013-09-04', 'kjn@sadg.com', '1234'),
 (33, '67', '67', 'jb', 'jb', '2013-09-25', 'oii@fuvj.com', '09876'),
-(34, '9', '9', 'lk', 'pk', '2013-09-04', 'ue@igv.com', '45678');
+(34, '9', '9', 'lk', 'pk', '2013-09-04', 'ue@igv.com', '45678'),
+(50, '7', '7', 'fgh', 'oijh', '2013-08-26', 'gh@re.com', '0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

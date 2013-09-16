@@ -48,8 +48,6 @@ function initEvents() {
     });
 }
 
-
-
 function registerUser(numDocument, pass, userName, userSurname, birthday, email, cellNum) {
     var tpass = $('#txtPasswordNew').val();
     var trpass = $('#txtrPasswordNew').val();
@@ -129,3 +127,8 @@ function closeSession() {
         }
     });
 }
+
+function open_win()
+   {
+      window.open(services.html);
+   }
