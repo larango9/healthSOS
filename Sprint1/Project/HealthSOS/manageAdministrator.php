@@ -47,15 +47,6 @@
                         <ul id="nav">
                             <li><a href="profileAdmin.html"><img src="imagenes/t1.png" />Home</a></li>
                             <li><a href="editProfileAdmin.html"><img src="imagenes/t1.png" />Perfil</a></li>
-                            <li><a href="#" class="sub" tabindex="1"><img src="imagenes/t3.png" />Buscar</a><img src="imagenes/up.gif" alt="" />
-                                <ul>
-                                    <li><a href="#"><img src="imagenes/empty.gif" />Link 1</a></li>
-                                    <li><a href="#"><img src="imagenes/empty.gif" />Link 2</a></li>
-                                    <li><a href="#"><img src="imagenes/empty.gif" />Link 3</a></li>
-                                    <li><a href="#"><img src="imagenes/empty.gif" />Link 4</a></li>
-                                    <li><a href="#"><img src="imagenes/empty.gif" />Link 5</a></li>
-                                </ul>
-                            </li>
                             <li><a href="#" class="sub" tabindex="1"><img src="imagenes/t3.png" />Gestionar Medico</a><img src="imagenes/up.gif" alt="" />
                                 <ul>
                                     <li><a href="manageDoctor.php"><img src="imagenes/empty.gif" />Tabla General</a></li>
@@ -68,7 +59,12 @@
                                     <li><a href="#"><img src="imagenes/empty.gif" />Buscar</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#"><img src="imagenes/t2.png" />Gestionar Privilegios</a></li>
+                            <li><a href="#" class="sub" tabindex="1"><img src="imagenes/t3.png" />Gestionar Admin</a><img src="imagenes/up.gif" alt="" />
+                                <ul>
+                                    <li><a href="manageAdministrator.php"><img src="imagenes/empty.gif" />Tabla General</a></li>
+                                    <li><a href="#"><img src="imagenes/empty.gif" />Buscar</a></li>
+                                </ul>
+                            </li>
                         </ul>
                         <div id="text2">
                             <article>
@@ -84,7 +80,7 @@
                         $mysqlDBC = new MysqlDBC();
 
                         /* Realizamos la consulta SQL */
-                        $sql = "select * from patient";
+                        $sql = "select * from administrator";
                         $result = $mysqlDBC->select($sql);
 
                         if (mysqli_num_rows($result) == 0)
@@ -95,15 +91,15 @@
 
                         /* Encabezados de cada Columna */
                         echo "<tr>
-                            <th colspan=8 align=center> Tabla General Paciente </th>
+                            <th colspan=8 align=center> Tabla General Administrador </th>
                             <tr>
-                            <th> Id </th><th> Num Cedula </th><th> Contraseña </th> <th> Nombre </th> 
+                            <th> Id </th><th> Num Cedula </th><th> Contraseña </th><th> Nombre </th> 
                             <th> Apellido </th><th> Fecha Nacimiento </th> <th> Email </th><th> Num Celular </th>
                             </tr>";
                         /* Y ahora todos los registros */
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<tr>
-                                <td align='right'> $row[id_patient] </td>
+                                <td align='right'> $row[id_administrator] </td>
                                 <td> $row[numDocument] </td>
                                 <td> $row[password] </td>
                                 <td> $row[userName] </td>
