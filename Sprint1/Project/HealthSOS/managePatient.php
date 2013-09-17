@@ -36,7 +36,7 @@
 
                         <ul id="nav">
                             <li><a href="profileAdmin.html"><img src="imagenes/t1.png" />Home</a></li>
-                            <li><a href="editProfileAdmin.html"><img src="imagenes/t1.png" />Perfil</a></li>
+                            <li><a href="editProfileAdmin.php"><img src="imagenes/t1.png" />Perfil</a></li>
                             <li><a href="#" class="sub" tabindex="1"><img src="imagenes/t3.png" />Gestionar Medico</a><img src="imagenes/up.gif" alt="" />
                                 <ul>
                                     <li><a href="manageDoctor.php"><img src="imagenes/empty.gif" />Tabla General</a></li>
