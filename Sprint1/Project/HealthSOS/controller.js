@@ -44,17 +44,8 @@ function initEvents() {
     });
 
     $('#linkClose').on('click', function() {
+        window.location.replace("index.html");
         closeSession();
-    });
-    
-    $('#btnUpdateAdmin').on('click', function(){
-        var numDocument = $('#numberDocument').val();
-        var userName = $('#name').val();
-        var userSurname = $('#surname').val();
-        var birthday = $('#birthday').val();
-        var email = $('#email').val();
-        var cellNum = $('#cellNumber').val();
-        updateAdmin(numDocument, userName, userSurname, birthday, email, cellNum);
     });
 }
 
@@ -81,35 +72,6 @@ function registerUser(numDocument, pass, userName, userSurname, birthday, email,
         }
     });
 }
-
-
-function updateAdmin(numDocument, userName, userSurname, birthday, email, cellNum)
-{
-    
-    $.ajax({
-        dataType: "json",
-        url: 'php/UpdateAdminData.php',
-        type:'POST',
-        data:'numDocument=' + numDocument + '&userName=' + userName + '&userSurname=' + userSurname + '&birthday=' + birthday + '&email=' + email + '&cellNum=' + cellNum,
-        success: function(data)
-        {
-            if (data.result == true)
-            {
-                alert('Datos Actualizados');
-                window.location.replace("profileAdmin.html");
-                $('#menuInit').fadeOut();
-                $('#menuRegister').fadeIn();
-                $('#loginUser').fadeOut();
-                $('#registerUser').fadeOut();
-            }
-            else
-            {
-                alert('Datos faltantes');
-            }
-        }
-    });
-}
-
 
 function loginUser(numDocument, pass) {
     $.ajax({

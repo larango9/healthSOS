@@ -15,10 +15,6 @@
             <header>
                 <!--header-->
                 <h1> Health S.O.S </h1>
-                <section id="menuInit">
-                    <div id="linkRegister" class="eachItemMenu"><p>Registrar</p></div>
-                    <div id="linkLogin" class="eachItemMenu"><p>Login</p></div>
-                </section>
                 <section id="menuRegister">
                     <div id="linkClose" class="eachItemMenu"><p>Salir</p></div>
                 </section>
@@ -28,16 +24,10 @@
                 <img    src="imagenes/Logo.jpg">
             </div>
 
-            <div id="menuhoriz">
-
-                <ul>  
-                    <li> <a href="index.html"> Inicio</a></li>
-                    <li> <a href="services.html"> Servicios</a></li>
-                    <li> <a href="contact.html"> Contactenos</a></li>
-                </ul>
+            <div id="separator">
+                <hr/>
             </div>
-
-
+            
             <div style="text-align:centert">
                 <div style="text-align: justify">
 

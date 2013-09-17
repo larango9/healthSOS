@@ -1,6 +1,5 @@
 <?php
 
-    session_name("mainSession");
     session_start();
     
     
