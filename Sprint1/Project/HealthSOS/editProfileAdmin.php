@@ -1,3 +1,31 @@
+<?php
+
+    session_name("mainSession");
+    session_start();
+    
+    include 'php/MysqlDBC.php';
+    
+    if (!$mysqlDBC) 
+    {
+        $mysqlDBC = new MysqlDBC();
+    }
+    
+    $query = "SELECT * FROM `administrator` WHERE `numDocument` = ". $_SESSION['user'] ;
+    $result = $mysqlDBC->select($query);
+    
+    foreach ($result as $i)
+    {
+        $name = $i['userName'];
+        $lastName = $i['userSurname'];
+        $numDoc = $i['numDocument'];
+        $birth = $i['birthday'];
+        $mail = $i['email'];
+        $numCell = $i['cellNum'];
+    }
+    
+    mysqli_close($mysqlDBC);
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -58,14 +86,26 @@
                             </li>
                         </ul>
 
-                        <div id="text2">
-                            <article>
-                                <h4>¡Bienvenido Administrador!</h4>
-                                <p>En este espacio podrá editar sus datos personales, gestionar los datos de los médicos,</p>
-                                <p>gestionar los datos de los pacientes y asignar privilegios a otros administradores.</p>
-                            </article>
-                        </div>
+                        <section id="editProfileUser">
+                            <form>
+                                <h1>Perfil Administrador</h1>
 
+                                <label for="name">Nombre:</label>
+                                <input id="name" type="text" name="name" placeholder="Nombre" required="" value="<? echo $name; ?>" />
+                                <label for="surname">Apellido:</label>
+                                <input id="surname" type="text" name="surname" placeholder="Apellido" required="" value="<? echo $lastName; ?>" />
+                                <label for="numberDocument">Número de Documento:</label>
+                                <input id="numberDocument" type="text" name="numberDocument" placeholder="Número de Documento" required="" value="<? echo $numDoc; ?>" />
+                                <label for="birthday">Fecha de Nacimiento:</label>
+                                <input id="birthday" type="date" name="birthday" placeholder="birthday" required="" value="<? echo $birth; ?>" />
+                                <label for="email">Email:</label>
+                                <input id="email" type="email" name="email" placeholder="ejemplo@correo.com" required="" value="<? echo $mail; ?>" />
+                                <label for="cellNumber">Número de Celular:</label>
+                                <input id="cellNumber" type="text" name="cellNumber" placeholder="Número de Celular" required="" value="<? echo $numCell; ?>"/>
+                                <input class="buttonStyle" id="btnUpdateAdmin" type="button" value="Guardar" />                          
+                                <br />
+                            </form>
+                        </section>
                     </div>
                 </div>
             </div>
