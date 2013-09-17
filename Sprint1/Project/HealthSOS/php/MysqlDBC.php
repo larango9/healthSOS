@@ -15,7 +15,7 @@ class MysqlDBC {
     private $password;
     private $name;
     
-    function __construct($url = 'localhost', $username = 'root', $password = '', $name = 'db_h') {
+    function __construct($url = 'localhost', $username = 'root', $password = 'root', $name = 'db_healthsos') {
         $this->url = $url;
         $this->username = $username;
         $this->password = $password;
