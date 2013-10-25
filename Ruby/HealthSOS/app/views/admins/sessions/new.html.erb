@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Health S.O.S</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <script src="lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="controller.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div id="page">
+
+            <header>
+                <!--header-->
+                <h1> Health S.O.S </h1>
+                
+            </header>
+
+            <div id="logo">
+                <%= image_tag "Logo.jpg" %>
+            </div>
+            
+			<div id="menuhoriz">
+
+            </div>
+
+        <div style="text-align:centert">
+            <div style="text-align: justify">
+
+            <form>
+                <h3>Iniciar Sesion</h3>
+
+				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+				  <div><%= f.label :email %><br />
+				  <%= f.email_field :email, :autofocus => true %></div>
+
+				  <div><%= f.label :password %><br />
+				  <%= f.password_field :password %></div>
+
+				  <% if devise_mapping.rememberable? -%>
+				    <div><%= f.label :recordarme %><%= f.check_box :remember_me %></div>
+				  <% end %>
+
+				  <div><%= f.submit "Entrar" %></div>
+				<% end %>
+			</form>
+
+                <br /><br /><br />
+            </div>
+        </div> 
+        </div>
+    </body>
+</html>
+
+<%= render "admins/shared/links" %>
