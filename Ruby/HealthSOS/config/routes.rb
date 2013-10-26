@@ -1,10 +1,16 @@
 HealthSOS::Application.routes.draw do
 
-  devise_for :admins
+  get "post/post"
 
   get "service/service"
 
   get "contact/contactus"
+
+  devise_for :admins
+
+  devise_scope :admin do
+    get "admin", :to => "devise/sessions#new"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
