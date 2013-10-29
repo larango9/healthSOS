@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Health S.O.S</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <script src="lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="controller.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div id="page">
+
+            <header>
+                <!--header-->
+                <h1> Health S.O.S </h1>
+                <section id="menuInit">
+                    <div id="linkRegister" class="eachItemMenu"><p>Registrar</p></div>
+                    <div id="linkLogin" class="eachItemMenu"><p>Login</p></div>
+                </section>
+                <section id="menuRegister">
+                    <div id="linkClose" class="eachItemMenu"><p>Salir</p></div>
+                </section>
+            </header>
+
+            <div id="logo">
+                <%= image_tag "Logo.jpg" %>
+            </div>
+
+        <div id="menuhoriz">
+
+            <ul>  
+                <li> <%= link_to 'Inicio', root_path %></li>
+                <li> <%= link_to 'Servicios', service_service_path(@service) %></li>
+                <li> <%= link_to 'Contactenos', contact_contactus_path(@contact) %></li>
+            </ul>
+        </div>
+
+
+        <div style="text-align:centert">
+            <div style="text-align: justify">
+
+                <article>
+                    <h2>Nuestros Servicios</h2>
+                    <p>Health S.O.S ofrece a sus usuarios la posibilidad de acceder a los siguientes servicios:</p>
+                    <ul> 
+                        <li>Pedir una cita médica a través de nuestra página web.</li> 
+                        <li>Cancelar una cita médica a través de nuestra página web, previamente solicitada.</li> 
+                        <li>Foro, donde un experto en el área de la medicina le ayudará a solucionar sus dudas.</li> 
+                        <li>Notificaciones en su dispositivo móvil, dandole previo aviso sobre su cita médica o medicamentos.</li> 
+                    </ul>
+                </article>
+
+                <br /><br /><br />
+            </div>
+        </div> 
+        </div>
+    </body>
+</html>

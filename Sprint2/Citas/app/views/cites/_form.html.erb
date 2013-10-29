@@ -1,0 +1,33 @@
+<%= form_for(@cite) do |f| %>
+  <% if @cite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cite.errors.count, "error") %> prohibited this cite from being saved:</h2>
+
+      <ul>
+      <% @cite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre_paciente %><br />
+    <%= f.text_field :nombre_paciente %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre_medico %><br />
+    <%= f.text_field :nombre_medico %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidad_medico %><br />
+    <%= f.text_field :especialidad_medico %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

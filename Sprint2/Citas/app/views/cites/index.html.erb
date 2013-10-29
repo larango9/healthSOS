@@ -1,0 +1,29 @@
+<h1>Listing cites</h1>
+
+<table>
+  <tr>
+    <th>Nombre paciente</th>
+    <th>Fecha</th>
+    <th>Nombre medico</th>
+    <th>Especialidad medico</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cites.each do |cite| %>
+  <tr>
+    <td><%= cite.nombre_paciente %></td>
+    <td><%= cite.fecha %></td>
+    <td><%= cite.nombre_medico %></td>
+    <td><%= cite.especialidad_medico %></td>
+    <td><%= link_to 'Show', cite %></td>
+    <td><%= link_to 'Edit', edit_cite_path(cite) %></td>
+    <td><%= link_to 'Destroy', cite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cite', new_cite_path %>
