@@ -30,10 +30,26 @@
             <div style="text-align: justify">
 
             <form>
-                <h3>Registrar Administrador</h3>
+            	<h3>Registro</h3>
             </form>
+
 			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 			  <%= devise_error_messages! %>
+
+			  <div><%= f.label :Nombre %><br />
+			  <%= f.text_field :UserName, :autofocus => true %></div>
+
+			  <div><%= f.label :Apellidos %><br />
+			  <%= f.text_field :UserLastName, :autofocus => true %></div>
+
+			  <div><%= f.label :Cedula %><br />
+			  <%= f.text_field :NumDocument, :autofocus => true %></div>
+
+			  <div><%= f.label :Nacimiento %><br />
+			  <%= f.date_select :Birth, :start_year => 1900 %></div>
+
+			  <div><%= f.label :Telefono %><br />
+			  <%= f.text_field :Telephone, :autofocus => true %></div>
 
 			  <div><%= f.label :email %><br />
 			  <%= f.email_field :email, :autofocus => true %></div>
@@ -44,11 +60,8 @@
 			  <div><%= f.label :password_confirmation %><br />
 			  <%= f.password_field :password_confirmation %></div>
 
-
-
-			  <div><%= f.submit "Registrar" %></div>
+			  <div><%= f.submit "Registrarse" %></div>
 			<% end %>
-			
 
                 <br /><br /><br />
             </div>
@@ -56,5 +69,3 @@
         </div>
     </body>
 </html>
-
-<%= render "admins/shared/links" %>

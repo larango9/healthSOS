@@ -36,22 +36,26 @@
                     <div class="container">
 
                         <ul id="nav">
-                            <li><a href="profilePatient.html"><img src="imagenes/t1.png" />Home</a></li>
-                            <li><a href="editProfilePatient.html"><img src="imagenes/t1.png" />Perfil</a></li>
-                            <li><a href="appointmentCalendar.html"><img src="imagenes/t1.png" />Agenda de Citas</a></li>
-                            <li><a href="#" class="sub" tabindex="1"><img src="imagenes/t3.png" />Citas</a><img src="imagenes/up.gif" alt="" />
+                            <li><%= link_to image_tag("t1.png")+"Editar perfil", edit_patient_registration_path %></li>
+                            <li><%= link_to image_tag("t1.png")+"Agendar Citas", root_path %></li>
+                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Citas</a><%=image_tag "up.gif"%>
                                 <ul>
-                                    <li><a href="getAppointment.html"><img src="imagenes/empty.gif" />Solicitar</a></li>
-                                    <li><a href="cancelAppointment.html"><img src="imagenes/empty.gif" />Cancelar</a></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Solicitar", root_path %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Cancelar", root_path %></li>
                                 </ul>
                             </li>
-                            <li><a href="forum.html"><img src="imagenes/t1.png" />Foro</a></li>
+                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Foro</a><%=image_tag "up.gif"%>
+                            	<ul>
+                                    <li><%= link_to image_tag("empty.gif")+"Ver Foro", controller: "posts" %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Nueva Entrada", new_post_path %></li>
+                                </ul>
+                            </li>
                         </ul>
 
                         <div id="text2">
                             <article>
-                                <h2>Foro</h2>
-                                <p>En este espacio podrá participar de los foros de discusión.</p>
+                                <h2>Bienvenido <%=current_patient.UserName%></h2>
+                                <p>En este espacio podras encontrar tu informacion, citas y demas.</p>
                                
                             </article>
                         </div>
@@ -62,3 +66,4 @@
         </div>
     </body>
 </html>
+

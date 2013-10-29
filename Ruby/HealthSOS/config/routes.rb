@@ -1,6 +1,19 @@
 HealthSOS::Application.routes.draw do
 
-  get "post/post"
+  get "user_dashboard/dashboard"
+
+  resources :Patients
+  resources :patients
+
+  devise_for :patient
+
+  resources :posts
+
+  get "posts/index"
+
+  get "admin_dashboard/dashboard"
+
+  get "admins/page"
 
   get "service/service"
 
@@ -11,7 +24,6 @@ HealthSOS::Application.routes.draw do
   devise_scope :admin do
     get "admin", :to => "devise/sessions#new"
   end
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

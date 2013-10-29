@@ -28,30 +28,24 @@
 
         <div style="text-align:centert">
             <div style="text-align: justify">
-
-            <form>
-                <h3>Iniciar Sesion Administrador</h3>
-
+                <form>
+                    <h3>Iniciar Sesion Administrador</h3>
+                </form>
 				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                <%= devise_error_messages! %>
+
 				  <div><%= f.label :email %><br />
 				  <%= f.email_field :email, :autofocus => true %></div>
 
 				  <div><%= f.label :password %><br />
 				  <%= f.password_field :password %></div>
 
-				  <% if devise_mapping.rememberable? -%>
-				    <div><%= f.label :recordarme %><%= f.check_box :remember_me %></div>
-				  <% end %>
-
 				  <div><%= f.submit "Entrar" %></div>
 				<% end %>
-			</form>
-
-                <br /><br /><br />
+			
             </div>
         </div> 
         </div>
     </body>
 </html>
 
-<%= render "admins/shared/links" %>

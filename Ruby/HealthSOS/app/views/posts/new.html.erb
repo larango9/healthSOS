@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Health S.O.S </title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <script src="lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="controller.js" type="text/javascript"></script>
+    </head>
+    <body>
+
+        <div id="page">
+
+            <header>
+                <!--header-->
+                <h1> Health S.O.S </h1>
+                <section id="menuRegister">
+                    <div id="linkClose" class="eachItemMenu"><p>Salir</p></div>
+                </section>
+            </header>
+
+            <div id="logo">
+                <%= image_tag "Logo.jpg"%>
+            </div>
+
+           
+            <div style="text-align:centert">
+                <div style="text-align: justify">
+
+
+                    <div class="container">
+                        <div id="text2">
+                          <article>
+                               
+                            <h1>Nueva entrada</h1>
+ 
+							<%= render 'form' %>
+							 
+							<%= link_to 'Atras', action: :index %>
+
+                          </article>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+

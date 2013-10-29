@@ -28,33 +28,25 @@
 
         <div style="text-align:centert">
             <div style="text-align: justify">
+                <form>
+                    <h3>Iniciar Sesion</h3>
+                </form>
+				<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+                <%= devise_error_messages! %>
 
-            <form>
-                <h3>Registrar Administrador</h3>
-            </form>
-			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-			  <%= devise_error_messages! %>
+				  <div><%= f.label :email %><br />
+				  <%= f.email_field :email, :autofocus => true %></div>
 
-			  <div><%= f.label :email %><br />
-			  <%= f.email_field :email, :autofocus => true %></div>
+				  <div><%= f.label :password %><br />
+				  <%= f.password_field :password %></div>
 
-			  <div><%= f.label :password %><br />
-			  <%= f.password_field :password %></div>
-
-			  <div><%= f.label :password_confirmation %><br />
-			  <%= f.password_field :password_confirmation %></div>
-
-
-
-			  <div><%= f.submit "Registrar" %></div>
-			<% end %>
+				  <div><%= f.submit "Entrar" %></div>
+				<% end %>
 			
-
-                <br /><br /><br />
             </div>
         </div> 
         </div>
     </body>
 </html>
 
-<%= render "admins/shared/links" %>
+

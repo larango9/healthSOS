@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Health S.O.S </title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <script src="lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="controller.js" type="text/javascript"></script>
+    </head>
+    <body>
+
+        <div id="page">
+
+            <header>
+                <!--header-->
+                <h1> Health S.O.S </h1>
+                <section id="menuRegister">
+                    <div id="linkClose" class="eachItemMenu"><p>Salir</p></div>
+                </section>
+            </header>
+
+            <div id="logo">
+                <%= image_tag "Logo.jpg"%>
+            </div>
+
+            
+            <div style="text-align:centert">
+                <div style="text-align: justify">
+
+
+                    <div class="container">
+
+                      <ul id="nav">
+                            <li><%= link_to image_tag("t1.png")+"Editar perfil", edit_patient_registration_path %></li>
+                            <li><%= link_to image_tag("t1.png")+"Agendar Citas", root_path %></li>
+                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Citas</a><%=image_tag "up.gif"%>
+                                <ul>
+                                    <li><%= link_to image_tag("empty.gif")+"Solicitar", root_path %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Cancelar", root_path %></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Foro</a><%=image_tag "up.gif"%>
+                              <ul>
+                                    <li><%= link_to image_tag("empty.gif")+"Ver Foro", controller: "posts" %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Nueva Entrada", new_post_path %></li>
+                                </ul>
+                            </li>
+                        </ul>
+                      
+                        <div id="text2">
+                          <article>
+                               
+                          <form>
+                            <h1>Posts</h1>
+                          </form>
+                            <table>
+                              <tr>
+                                <th>Titulo</th>
+                                <th>Post</th>
+                                <th>Acciones</th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+                             
+                            <% @posts.each do |post| %>
+                              <tr>
+                                <td><%= post.title %></td>
+                                <td><%= post.text %></td>
+                                <td><%= link_to 'Ver', action: :show, id: post.id %></td>
+                              </tr>
+                            <% end %>
+                            </table>
+
+                          </article>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+

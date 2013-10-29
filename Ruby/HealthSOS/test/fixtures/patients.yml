@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  NumDocument: MyString
+  UserName: MyString
+  UserLastName: MyString
+  Birth: 2013-10-27 16:27:16
+  Telephone: MyString
+
+two:
+  NumDocument: MyString
+  UserName: MyString
+  UserLastName: MyString
+  Birth: 2013-10-27 16:27:16
+  Telephone: MyString

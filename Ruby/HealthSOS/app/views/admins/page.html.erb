@@ -15,15 +15,18 @@
             <header>
                 <!--header-->
                 <h1> Health S.O.S </h1>
+                <section id="menuRegister">
+                    <div id="linkClose" class="eachItemMenu"><p>Salir</p></div>
+                </section>
             </header>
 
             <p class="navbar-text pull-right">
-        <% if admin_signed_in? %>
-          <strong><%= current_admin.email %></strong>.|
-          <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
-        <% else %>
-          <%= link_to "Login", new_admin_session_path, :class => 'navbar-link'  %>
-        <% end %>
+			  <% if admin_signed_in? %>
+			    <strong><%= current_admin.email %></strong>.|
+			    <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
+			  <% else %>
+			    <%= link_to "Login", new_admin_session_path, :class => 'navbar-link'  %>
+			  <% end %>
 
             <div id="logo">
                 <%= image_tag "Logo.jpg" %>
@@ -50,7 +53,7 @@
                             </li>
                             <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Gestionar Paciente</a><%=image_tag "up.gif"%>
                                 <ul>
-                                    <li><%= link_to image_tag("empty.gif")+"Tabla General", patient_path %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Tabla General", Patients_path(@patients) %></li>
                                     <li><%= link_to image_tag("empty.gif")+"Buscar", root_path %>
                                 </ul>
                             </li>
@@ -63,37 +66,11 @@
                         </ul>
 
                         <div id="text2">
-                            <h2>Editar <%= resource_name.to_s.humanize %></h2>
-
-                          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-                            <%= devise_error_messages! %>
-
-                            <div><%= f.label :Nombre %><br />
-                            <%= f.text_field :Name, :autofocus => true %></div>
-
-                            <div><%= f.label :Telefono %><br />
-                            <%= f.text_field :Telephone, :autofocus => true %></div>
-
-                            <div><%= f.label :email %><br />
-                            <%= f.email_field :email, :autofocus => true %></div>
-
-                            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-                            <% end %>
-
-                            <div><%= f.label :password %> <i>(Dejarlo en blanco si no se desea cambiar)</i><br />
-                            <%= f.password_field :password, :autocomplete => "off" %></div>
-
-                            <div><%= f.label :password_confirmation %><br />
-                            <%= f.password_field :password_confirmation %></div>
-
-                            <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-                            <%= f.password_field :current_password %></div>
-
-                            <div><%= f.submit "Actualizar" %></div>
-                          <% end %>
-
-                          <p><%= button_to "Cancelar mi cuenta", registration_path(resource_name), :data => { :confirm => "Esta seguro?" }, :method => :delete %></p>
+                            <article>
+                                <h4>¡Bienvenido Administrador!</h4>
+                                <p>En este espacio podrá editar sus datos personales, gestionar los datos de los médicos,</p>
+                                <p>gestionar los datos de los pacientes y asignar privilegios a otros administradores.</p>
+                            </article>
                         </div>
 
                     </div>
