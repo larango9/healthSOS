@@ -63,16 +63,4 @@ ActiveRecord::Schema.define(:version => 20131027214856) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "users", :force => true do |t|
-    t.string   "numberId"
-    t.string   "name"
-    t.string   "lastName"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "email"
-    t.string   "telephone"
-    t.boolean  "isDoctor"
-    t.datetime "birth"
-  end
-
 end
