@@ -7,7 +7,9 @@ HealthSOS::Application.routes.draw do
 
   devise_for :patient
 
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 
   get "posts/index"
 
