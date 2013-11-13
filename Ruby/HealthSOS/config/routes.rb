@@ -1,5 +1,8 @@
 HealthSOS::Application.routes.draw do
 
+  resources :cita
+  get "cita/index"
+
   get "user_dashboard/dashboard"
 
   resources :Patients

@@ -33,6 +33,14 @@ ActiveRecord::Schema.define(:version => 20131107212407) do
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
+  create_table "cita", :force => true do |t|
+    t.string   "cedulaPaciente"
+    t.string   "cedulaDoctor"
+    t.datetime "fecha"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "comments", :force => true do |t|
     t.string   "commenter"
     t.text     "body"
@@ -71,18 +79,6 @@ ActiveRecord::Schema.define(:version => 20131107212407) do
     t.text     "text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "users", :force => true do |t|
-    t.string   "numberId"
-    t.string   "name"
-    t.string   "lastName"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "email"
-    t.string   "telephone"
-    t.boolean  "isDoctor"
-    t.datetime "birth"
   end
 
 end

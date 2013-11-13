@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cedulapaciente:</b>
+  <%= @citum.cedulaPaciente %>
+</p>
+
+<p>
+  <b>Ceduladoctor:</b>
+  <%= @citum.cedulaDoctor %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @citum.fecha %>
+</p>
+
+
+<%= link_to 'Edit', edit_citum_path(@citum) %> |
+<%= link_to 'Back', cita_path %>
