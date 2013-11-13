@@ -37,17 +37,16 @@
 
                         <ul id="nav">
                             <li><%= link_to image_tag("t1.png")+"Editar perfil", edit_patient_registration_path %></li>
-                            <li><%= link_to image_tag("t1.png")+"Agendar Citas", root_path %></li>
                             <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Citas</a><%=image_tag "up.gif"%>
                                 <ul>
-                                    <li><%= link_to image_tag("empty.gif")+"Solicitar", root_path %></li>
-                                    <li><%= link_to image_tag("empty.gif")+"Cancelar", root_path %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Ver Citas", controller: "cita" %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Nueva Cita", new_citum_path %></li>
                                 </ul>
                             </li>
                             <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Foro</a><%=image_tag "up.gif"%>
                             	<ul>
                                     <li><%= link_to image_tag("empty.gif")+"Ver Foro", controller: "posts" %></li>
-                                    <li><%= link_to image_tag("empty.gif")+"Nueva Entrada", new_post_path %></li>
+                                    <li><%= link_to image_tag("empty.gif")+"Nuevo Post", new_post_path %></li>
                                 </ul>
                             </li>
                         </ul>

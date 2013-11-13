@@ -41,20 +41,20 @@
                     <div class="container">
 
                         <ul id="nav">
-                            <li><%= link_to image_tag("t1.png")+"Editar perfil", edit_admin_registration_path %></li>
-                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Gestionar Medico</a><%=image_tag "up.gif"%>
+                            <li><%= link_to image_tag("t1.png")+"Editar Perfil", edit_admin_registration_path %></li>
+                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Gestionar Medicos</a><%=image_tag "up.gif"%>
                                 <ul>
                                     <li><%= link_to image_tag("empty.gif")+"Tabla General", root_path %></li>
                                     <li><%= link_to image_tag("empty.gif")+"Buscar", root_path %>
                                 </ul>
                             </li>
-                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Gestionar Paciente</a><%=image_tag "up.gif"%>
+                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Gestionar Pacientes</a><%=image_tag "up.gif"%>
                                 <ul>
                                     <li><%= link_to image_tag("empty.gif")+"Tabla General", patient_path %></li>
                                     <li><%= link_to image_tag("empty.gif")+"Buscar", root_path %>
                                 </ul>
                             </li>
-                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Gestionar Admin</a><%=image_tag "up.gif"%>
+                            <li><a href="#" class="sub" tabindex="1"><%=image_tag "t3.png"%>Gestionar Admins</a><%=image_tag "up.gif"%>
                                 <ul>
                                     <li><%= link_to image_tag("empty.gif")+"Tabla General", root_path %></li>
                                     <li><%= link_to image_tag("empty.gif")+"Buscar", root_path %>
@@ -67,9 +67,6 @@
 
                           <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
                             <%= devise_error_messages! %>
-
-                            <div><%= f.label :Nombre %><br />
-                            <%= f.text_field :Name, :autofocus => true %></div>
 
                             <div><%= f.label :Telefono %><br />
                             <%= f.text_field :Telephone, :autofocus => true %></div>
