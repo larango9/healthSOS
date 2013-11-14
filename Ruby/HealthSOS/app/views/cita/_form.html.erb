@@ -12,18 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :cedulaPaciente %><br />
-    <%= f.text_field :cedulaPaciente %>
+    <%= f.label :Cedula_Paciente %><br />
+    <%= f.text_field :cedulaPaciente, :autofocus => true%>
   </div>
   <div class="field">
-    <%= f.label :cedulaDoctor %><br />
+    <%= f.label :Cedula_Doctor %><br />
     <%= f.text_field :cedulaDoctor %>
   </div>
   <div class="field">
-    <%= f.label :fecha %><br />
+    <%= f.label :Fecha %><br />
     <%= f.datetime_select :fecha %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar" %>
   </div>
 <% end %>

@@ -56,8 +56,8 @@
 
                           <table>
                           <tr>
-                          <th>Cedulapaciente</th>
-                          <th>Ceduladoctor</th>
+                          <th>Cedula paciente</th>
+                          <th>Cedula Doctor</th>
                           <th>Fecha</th>
                           <th></th>
                           <th></th>
@@ -69,16 +69,16 @@
                           <td><%= citum.cedulaPaciente %></td>
                           <td><%= citum.cedulaDoctor %></td>
                           <td><%= citum.fecha %></td>
-                          <td><%= link_to 'Show', citum %></td>
-                          <td><%= link_to 'Edit', edit_citum_path(citum) %></td>
-                          <td><%= link_to 'Destroy', citum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                          <td><%= link_to 'Ver', citum %></td>
+                          <td><%= link_to 'Editar', edit_citum_path(citum) %></td>
+                          <td><%= link_to 'Borrar', citum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                           </tr>
                           <% end %>
                           </table>
 
                           <br />
 
-                          <%= link_to 'New Citum', new_citum_path %>
+                          <%= link_to 'Nueva Cita', new_citum_path %>
 
                           </article>
                         </div>
